@@ -23,4 +23,9 @@ class NavigationController extends Controller
     {
         return view('home');
     }
+
+    public function mapa(Request $request)
+    {
+        return view('mapa');
+    }
 }

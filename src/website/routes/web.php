@@ -14,3 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'NavigationController@index')->name('navigation.index');
+Route::get('/mapa', 'NavigationController@mapa')->name('navigation.index');
+
+Route::get('/dados', 'DataController@index')->name('api.index');
+
+Route::match(array('GET','POST'), '/pesquisa', 'DataController@search')->name('api.search');
