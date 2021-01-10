@@ -19,22 +19,17 @@
     <link rel="stylesheet" href="{{ asset('css/froala_style.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/waves.css') }}">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/mapa.css') }}">
 
     <script src="{{ asset('js/mapa.js') }}" ></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwGP8sr9DdW3ftUvpi0-20wZ_ZnE92hVo&callback=initMap&libraries=&v=weekly"
         defer>
     </script>
-    <style type="text/css">
-        #map {
-            height: 800px;
-            width: 100%;
-        }
-    </style>
 </head>
 
 <body>
-    <h3>My Google Maps Demo</h3>
-    <!--The div element for the map -->
-    <div id="map"></div>
+    <div class="content">
+        <div class="mapa" id="map"></div>
+    </div>
 </body>
 </html>
