@@ -51,14 +51,13 @@ class DataController extends Controller
                 bacia LIKE :term OR
                 municipio LIKE :term
             GROUP BY
-                identificacao_corpo_hidrico, bacia, municipio, ponto_referencia
-            LIMIT 10");
-        
+                identificacao_corpo_hidrico, bacia, municipio, ponto_referencia");
+
         $stmt->bindValue(':term', '%' . $term . '%');
         $stmt->execute();
 
         $result = [];
-        
+
         while($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
             $result[] = $row;
         }

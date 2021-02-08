@@ -3,7 +3,7 @@
 
 <head>
     <title>Qualidade da Água</title>
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8"/>
 
@@ -12,7 +12,7 @@
 
     <!-- External styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    
+
     <!-- Local styles -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/froala_blocks.min.css') }}">
@@ -92,15 +92,17 @@
             <img src="{{ asset('img/logo/vector/isolated-monochrome-white.svg') }}" title="Logo Qualidade das Águas" />
             <h1>Qualidade das Águas</h1>
             <p class="subtitle">A água é de vital importância para a vida de todos. O monitoramento, cuidado e preservação desse recurso natural é essencial.</p>
- 
+
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-10 col-lg-8 text-center">
                         <div class="input-group mt-4 mb-4">
-                            <input type="text" class="form-control basicAutoComplete" data-url="{{ route('api.search') }}" autocomplete="off" placeholder="Ex.: Chapecó ou Rio Uruguai">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button"><i class="fa fa-search"></i> Pesquisar</button>
-                            </div>
+                            <form action="/mapa" method="GET">
+                                <input name="q" type="text" class="form-control" placeholder="Ex.: Chapecó ou Rio Uruguai">
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Pesquisar</button>
+                                </div>
+                            </form>
                         </div>
                         <p class="small"><i class="fa fa-info-circle"></i> Você pode pesquisar pelo nome da cidade ou unidade aquífera.</p>
                     </div>
@@ -176,7 +178,7 @@
             <div class="col-10 col-sm-6 col-md-5 col-lg-4 m-auto pb-5 pb-md-0">
               <img alt="image" class="img-fluid rounded-0" src="https://cdn.jsdelivr.net/gh/froala/design-blocks@master/dist/imgs/draws/iphone-hand.svg">
             </div>
-      
+
             <div class="col-12 ml-md-auto col-md-7 col-lg-6 pb-5 pb-md-0">
               <h1>Aplicativo móvel</h1>
               <p class="lead">Confira a qualidade das águas onde você estiver utilizando seu smartphone.</p>
@@ -264,7 +266,7 @@
             </div>
         </div>
     </footer>
-    
+
     <script src="{{ asset('js/jquery/jquery-3.5.1.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap/bootstrap-autocomplete.min.js') }}"></script>

@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'NavigationController@index')->name('navigation.index');
-Route::get('/mapa', 'NavigationController@mapa')->name('navigation.index');
+Route::get('/mapa', 'NavigationController@mapa')->name('mapa.index');
 
 Route::get('/dados', 'DataController@index')->name('api.index');
 

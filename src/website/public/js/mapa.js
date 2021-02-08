@@ -18,15 +18,19 @@ const convertDMSToDD = (deg, min, sec, direction)  => {
 };
 
 function initMap() {
-    // The location of Uluru
     const geoRS = { lat: -29.701, lng:  -53.718 };
-    // The map, centered at Uluru
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 7,
         center: geoRS,
     });
 
-    fetch('/pesquisa')
+    const urlParams = new URLSearchParams(window.location.search);
+    const search = urlParams.get('q');
+
+    const url = new URL('http://localhost:8000/pesquisa');
+    url.searchParams.append('q', search)
+
+    fetch(url)
         .then(r => r.json())
         .then(json => {
             json.forEach(b => {
@@ -38,3 +42,7 @@ function initMap() {
         })
 
 }
+
+const urlParams = new URLSearchParams(window.location.search);
+const search = urlParams.get('q');
+document.getElementById('searchInput').value = search;

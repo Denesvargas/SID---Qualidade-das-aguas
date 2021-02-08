@@ -21,15 +21,29 @@
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('css/mapa.css') }}">
 
-    <script src="{{ asset('js/mapa.js') }}" ></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwGP8sr9DdW3ftUvpi0-20wZ_ZnE92hVo&callback=initMap&libraries=&v=weekly"
-        defer>
-    </script>
 </head>
 
 <body>
     <div class="content">
+        <div class="row">
+            <form action="/mapa" method="GET">
+                <input id="searchInput" name="q" type="text" class="form-control"
+                       placeholder="Ex.: Chapecó ou Rio Uruguai">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i>
+                        Pesquisar
+                    </button>
+                </div>
+            </form>
+        </div>
+
         <div class="mapa" id="map"></div>
     </div>
+
+    <script src="{{ asset('js/mapa.js') }}"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwGP8sr9DdW3ftUvpi0-20wZ_ZnE92hVo&callback=initMap&libraries=&v=weekly"
+        defer>
+    </script>
 </body>
 </html>
