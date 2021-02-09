@@ -3,8 +3,32 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
+    width: 100%;
 }
 .mapa {
     flex: 1;
     height: 100%;
+    width: 100%;
+}
+
+.row-mapa {
+    display: flex;
+    width: 100%;
+    padding: 12px 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-map {
+    width: 40%;
+}
+
+.form-input-mapa {
+    width: 100%;
+}
+
+.icon-home {
+    position: absolute;
+    left: 5%;
 }

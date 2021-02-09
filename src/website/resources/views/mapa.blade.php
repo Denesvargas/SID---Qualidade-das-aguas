@@ -25,17 +25,19 @@
 
 <body>
     <div class="content">
-        <div class="row">
-            <form action="/mapa" method="GET">
-                <input id="searchInput" name="q" type="text" class="form-control"
-                       placeholder="Ex.: Chapecó ou Rio Uruguai">
-                <div class="input-group-append">
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i>
-                        Pesquisar
-                    </button>
+        <form action="/mapa" method="GET" class="form-input-mapa">
+            
+            <div class="row-mapa">
+                <div class="icon-home">
+                    <a href="/"><img src="{{ asset('/img/logo/profile.png') }}" title="Logo Qualidade das Águas" class="logo" /></a>
                 </div>
-            </form>
-        </div>
+                <input id="searchInput" name="q" type="text" class="form-control input-map"
+                    placeholder="Ex.: Chapecó ou Rio Uruguai">
+                <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i>
+                    Pesquisar
+                </button>
+            </div>
+        </form>
 
         <div class="mapa" id="map"></div>
     </div>

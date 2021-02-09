@@ -37,6 +37,15 @@ function initMap() {
                 if (!!b && !!b.latitude_s) {
                     const geo = dmsToDd({lat: b.latitude_s, lng: b.longitude_o});
                     const marker = new google.maps.Marker({position: geo, map});
+                    var infoWindow = new google.maps.InfoWindow({
+                        content: `<div><div><h3>${b.identificacao_corpo_hidrico}<h3></div><h4>Bacia: ${b.bacia
+                        }</h4><h4>Tipo de bacia: ${b.tipo_agua
+                        }</h4><h4>Data coleta: ${b.data_coleta}<h4></div>`
+                    });
+                    console.log('objeto ', b);
+                    marker.addListener('click', function() {
+                        infoWindow.open(map, marker);
+                    });
                 }
             });
         })

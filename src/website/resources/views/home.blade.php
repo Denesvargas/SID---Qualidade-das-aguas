@@ -96,14 +96,14 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-10 col-lg-8 text-center">
-                        <div class="input-group mt-4 mb-4">
-                            <form action="/mapa" method="GET">
-                                <input name="q" type="text" class="form-control" placeholder="Ex.: Chapecó ou Rio Uruguai">
+                        <form action="/mapa" method="GET">
+                            <div class="input-group mt-4 mb-4">
+                                <input id="search-home" name="q" type="text" class="form-control" placeholder="Ex.: Chapecó ou Rio Uruguai">
                                 <div class="input-group-append">
                                     <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Pesquisar</button>
                                 </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                         <p class="small"><i class="fa fa-info-circle"></i> Você pode pesquisar pelo nome da cidade ou unidade aquífera.</p>
                     </div>
                 </div>
